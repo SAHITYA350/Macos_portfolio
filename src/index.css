@@ -2,6 +2,7 @@
 
 @import "tailwindcss";
 
+
 html,
 body {
   width: 100dvw;
@@ -12,6 +13,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+
 
 @theme {
   --font-georama: "Georama", sans-serif;
@@ -37,7 +39,7 @@ body {
   }
 
   nav {
-    @apply flex justify-between items-center bg-white/50 backdrop-blur-3xl p-2 px-5 select-none;
+    @apply flex justify-between items-center bg-white/35 backdrop-blur-2xl p-2 px-5 select-none;
 
     div {
       @apply flex items-center max-sm:w-full max-sm:justify-center gap-5;
@@ -63,7 +65,11 @@ body {
 
 @layer components {
   .icon {
-    @apply p-1 hover:bg-gray-200 rounded hover:cursor-default;
+    @apply p-1 hover:bg-gray-300 rounded hover:cursor-default;
+  }
+
+  .icon-hover {
+    @apply p-1 hover:bg-gray-300 rounded hover:cursor-pointer transition-colors;
   }
 
   #welcome {
@@ -106,11 +112,11 @@ body {
     }
 
     .minimize {
-      @apply size-3.5 rounded-full bg-[#ffc030];
+      @apply size-3.5 rounded-full bg-[#ffc030] cursor-pointer;
     }
 
     .maximize {
-      @apply size-3.5 rounded-full bg-[#2acb42];
+      @apply size-3.5 rounded-full bg-[#2acb42] cursor-pointer;
     }
   }
 
